@@ -10,7 +10,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "pretest": "rm -rf ./test/generated",
+    "pretest": "rimraf ./test/generated",
     "test": "npm run test:node-soap && npm run test:node-soap2 && npm run test:public",
     "test:node-soap": "ts-node node_modules/tape/bin/tape ./test/node-soap/*.test.ts | tap-spec",
     "test:node-soap2": "ts-node node_modules/tape/bin/tape ./test/node-soap/**/*.test.ts | tap-spec",
@@ -42,6 +42,7 @@
   "homepage": "https://github.com/JPGygax68/wsdl-tsclient#readme",
   "devDependencies": {
     "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^5.5.3",
     "ts-node": "^10.7.0",
